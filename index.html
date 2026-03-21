@@ -49,7 +49,7 @@ body{
 ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:0;}
 
 /* ══════════════════════════════════════
-   JALI PATTERN – SVG inline as data URI
+   JALI PATTERN   SVG inline as data URI
 ══════════════════════════════════════ */
 .jali{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect fill='none' width='48' height='48'/%3E%3Ccircle cx='24' cy='24' r='10' stroke='%23C9933A' stroke-width='.6' fill='none' opacity='.18'/%3E%3Ccircle cx='24' cy='24' r='4' stroke='%23C9933A' stroke-width='.5' fill='none' opacity='.12'/%3E%3Cline x1='24' y1='0' x2='24' y2='48' stroke='%23C9933A' stroke-width='.4' opacity='.08'/%3E%3Cline x1='0' y1='24' x2='48' y2='24' stroke='%23C9933A' stroke-width='.4' opacity='.08'/%3E%3Cline x1='0' y1='0' x2='48' y2='48' stroke='%23C9933A' stroke-width='.3' opacity='.06'/%3E%3Cline x1='48' y1='0' x2='0' y2='48' stroke='%23C9933A' stroke-width='.3' opacity='.06'/%3E%3C/svg%3E");
@@ -252,7 +252,7 @@ h1.hero-title em{
 .hs-n sup{font-size:.45em;vertical-align:super;}
 .hs-l{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--warm-mid);margin-top:5px;font-weight:400;}
 
-/* right column – textile composition */
+/* right column   textile composition */
 .hero-r{
   position:relative;overflow:hidden;
 }
@@ -535,4 +535,1139 @@ h1.hero-title em{
 /* ── Gallery card colours & patterns ── */
 .gi-1{background:linear-gradient(160deg,#4A0E0A,#8B2B1A);}
 .gi-2{background:linear-gradient(160deg,#0D2B1A,#1A5C35);}
-.gi-3{background:linear-gradient(160deg,
+.gi-3{background:linear-gradient(160deg,#1A0A3A,#4A1A6B);}
+.gi-4{background:linear-gradient(160deg,#3A2000,#7A4A00);}
+.gi-5{background:linear-gradient(160deg,#2A0A2A,#6B1A5C);}
+.gi-6{background:linear-gradient(160deg,#001A2A,#003A5C);}
+.gi-7{background:linear-gradient(160deg,#2A1400,#6B3800);}
+.gi-8{background:linear-gradient(160deg,#1A0010,#5C0030);}
+
+/* ── Illustrated garment SVG containers ── */
+.garment-art{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+/* Blouse silhouette */
+.art-blouse{
+  width:60%;max-width:110px;
+  aspect-ratio:1/1.1;
+  position:relative;
+}
+.art-blouse::before{
+  content:'';position:absolute;
+  top:0;left:15%;width:70%;height:55%;
+  background:rgba(232,201,122,0.25);
+  border:1.5px solid rgba(232,201,122,0.5);
+  border-radius:0 0 40% 40%;
+  clip-path:polygon(0 0,100% 0,100% 80%,50% 100%,0 80%);
+}
+.art-blouse::after{
+  content:'';position:absolute;
+  top:0;left:0;width:100%;height:40%;
+  border-top:1.5px solid rgba(232,201,122,0.4);
+  background:linear-gradient(180deg,rgba(232,201,122,0.12),transparent);
+}
+/* neck opening */
+.art-blouse .neck{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:32%;height:28%;
+  border:1px solid rgba(232,201,122,0.5);
+  border-radius:0 0 50% 50%;
+  background:rgba(28,15,10,0.6);
+}
+/* sleeves */
+.art-blouse .sl,.art-blouse .sr-s{
+  position:absolute;top:8%;
+  width:22%;height:38%;
+  background:rgba(232,201,122,0.2);
+  border:1px solid rgba(232,201,122,0.4);
+  border-radius:6px;
+}
+.art-blouse .sl{left:-18%;transform:rotate(-12deg);}
+.art-blouse .sr-s{right:-18%;transform:rotate(12deg);}
+/* zari border lines */
+.art-blouse .zari{
+  position:absolute;bottom:10%;left:5%;right:5%;
+  height:1px;background:rgba(232,201,122,0.5);
+}
+.art-blouse .zari2{
+  position:absolute;bottom:6%;left:10%;right:10%;
+  height:1px;background:rgba(232,201,122,0.3);
+}
+
+/* Lehenga silhouette */
+.art-lehenga{
+  width:65%;max-width:120px;
+  aspect-ratio:1/1.6;
+  position:relative;display:flex;flex-direction:column;align-items:center;
+}
+.art-lehenga .choli{
+  width:60%;height:22%;
+  background:rgba(232,201,122,0.22);
+  border:1.5px solid rgba(232,201,122,0.5);
+  border-radius:4px 4px 0 0;
+  position:relative;
+}
+.art-lehenga .choli::after{
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:30%;height:50%;border-radius:0 0 50% 50%;
+  background:rgba(28,15,10,.5);border:1px solid rgba(232,201,122,.3);
+}
+.art-lehenga .skirt{
+  width:100%;flex:1;
+  background:rgba(232,201,122,0.15);
+  border:1.5px solid rgba(232,201,122,0.45);
+  border-top:none;
+  clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);
+  position:relative;overflow:hidden;
+}
+/* lehenga tier lines */
+.art-lehenga .skirt::before{
+  content:'';position:absolute;
+  top:33%;left:0;right:0;height:1px;
+  background:rgba(232,201,122,0.3);
+}
+.art-lehenga .skirt::after{
+  content:'';position:absolute;
+  top:66%;left:0;right:0;height:1px;
+  background:rgba(232,201,122,0.25);
+}
+.art-lehenga .dupatta{
+  position:absolute;top:5%;right:-25%;
+  width:30%;height:70%;
+  background:rgba(196,81,31,0.2);
+  border:1px solid rgba(196,81,31,0.4);
+  border-radius:2px;
+  transform:rotate(8deg);
+}
+
+/* Salwar Suit / Anarkali */
+.art-suit{
+  width:55%;max-width:100px;
+  aspect-ratio:1/1.8;
+  position:relative;display:flex;flex-direction:column;align-items:center;
+}
+.art-suit .kurta{
+  width:80%;height:65%;
+  background:rgba(232,201,122,0.18);
+  border:1.5px solid rgba(232,201,122,0.45);
+  clip-path:polygon(15% 0,85% 0,100% 100%,0 100%);
+  position:relative;
+}
+.art-suit .kurta::before{
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:25%;height:20%;border-radius:0 0 50% 50%;
+  background:rgba(28,15,10,.5);border:1px solid rgba(232,201,122,.3);
+}
+.art-suit .kurta::after{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:1px;
+  background:rgba(232,201,122,0.4);
+}
+.art-suit .salwar{
+  width:85%;flex:1;
+  display:flex;gap:6%;
+}
+.art-suit .leg{
+  flex:1;
+  background:rgba(232,201,122,0.12);
+  border:1px solid rgba(232,201,122,0.3);
+  border-top:none;
+  border-radius:0 0 6px 6px;
+}
+
+/* Embroidery / motif art */
+.art-embroidery{
+  width:70%;max-width:130px;
+  aspect-ratio:1/1;
+  position:relative;
+  border:1.5px solid rgba(232,201,122,0.3);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.art-embroidery::before{
+  content:'';position:absolute;inset:10px;
+  border:1px dashed rgba(232,201,122,0.25);
+  border-radius:50%;
+}
+.art-embroidery::after{
+  content:'';position:absolute;inset:22px;
+  border:1px solid rgba(232,201,122,0.2);
+  border-radius:50%;
+}
+.emb-center{
+  width:40%;height:40%;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,201,122,0.35),rgba(196,81,31,0.15));
+  border:1px solid rgba(232,201,122,0.5);
+  position:relative;z-index:1;
+}
+/* petals */
+.emb-petal{
+  position:absolute;width:14%;height:28%;
+  background:rgba(232,201,122,0.2);
+  border:1px solid rgba(232,201,122,0.35);
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  left:50%;transform-origin:50% 100%;
+  top:8%;margin-left:-7%;
+}
+
+/* Saree drape art */
+.art-saree{
+  width:60%;max-width:110px;
+  aspect-ratio:1/1.7;
+  position:relative;display:flex;flex-direction:column;align-items:center;
+}
+.art-saree .body{
+  width:75%;height:100%;
+  background:rgba(232,201,122,0.18);
+  border:1.5px solid rgba(232,201,122,0.45);
+  border-radius:4px;
+  position:relative;overflow:hidden;
+}
+.art-saree .body::before{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:25%;
+  background:rgba(196,81,31,0.25);
+  border-top:1.5px solid rgba(196,81,31,0.5);
+}
+.art-saree .body::after{
+  content:'';position:absolute;
+  bottom:25%;left:0;right:0;height:1.5px;
+  background:rgba(232,201,122,0.4);
+}
+.art-saree .pallu{
+  position:absolute;top:0;right:-28%;
+  width:32%;height:55%;
+  background:rgba(196,81,31,0.2);
+  border:1px solid rgba(196,81,31,0.4);
+  border-radius:2px 4px 4px 2px;
+  transform:rotate(5deg);
+}
+/* border stripe at bottom of pallu */
+.art-saree .pallu::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:20%;
+  background:rgba(232,201,122,0.3);border-top:1px solid rgba(232,201,122,0.4);
+}
+
+/* Kurti art */
+.art-kurti{
+  width:55%;max-width:100px;
+  aspect-ratio:1/1.5;
+  position:relative;
+}
+.art-kurti .body{
+  position:absolute;inset:0;
+  background:rgba(232,201,122,0.18);
+  border:1.5px solid rgba(232,201,122,0.45);
+  clip-path:polygon(15% 0,85% 0,95% 100%,5% 100%);
+}
+.art-kurti .neckline{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:28%;height:18%;
+  border-radius:0 0 50% 50%;
+  background:rgba(28,15,10,.5);
+  border:1px solid rgba(232,201,122,.3);
+}
+.art-kurti .hem{
+  position:absolute;bottom:4%;left:10%;right:10%;height:1px;
+  background:rgba(232,201,122,0.5);
+}
+.art-kurti .print{
+  position:absolute;top:35%;left:50%;transform:translateX(-50%);
+  width:30%;height:30%;
+  border:1px solid rgba(232,201,122,0.3);
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(196,81,31,0.2),transparent);
+}
+/* sleeve */
+.art-kurti .ksl,.art-kurti .ksr{
+  position:absolute;top:5%;
+  width:20%;height:32%;
+  background:rgba(232,201,122,0.15);
+  border:1px solid rgba(232,201,122,0.35);
+  border-radius:4px;
+}
+.art-kurti .ksl{left:-12%;transform:rotate(-10deg);}
+.art-kurti .ksr{right:-12%;transform:rotate(10deg);}
+
+/* Kids ghagra */
+.art-kids{
+  width:58%;max-width:106px;
+  aspect-ratio:1/1.5;
+  position:relative;display:flex;flex-direction:column;align-items:center;
+}
+.art-kids .ktop{
+  width:55%;height:28%;
+  background:rgba(232,201,122,0.22);
+  border:1.5px solid rgba(232,201,122,0.5);
+  border-radius:6px 6px 0 0;
+}
+.art-kids .kskirt{
+  width:100%;flex:1;
+  background:rgba(232,201,122,0.15);
+  border:1.5px solid rgba(232,201,122,0.4);
+  border-top:none;
+  clip-path:polygon(15% 0,85% 0,100% 100%,0 100%);
+  position:relative;overflow:hidden;
+}
+/* tier frills */
+.art-kids .kskirt::before{
+  content:'';position:absolute;top:40%;left:0;right:0;height:1px;
+  background:rgba(232,201,122,0.4);
+}
+.art-kids .kskirt::after{
+  content:'';position:absolute;top:70%;left:0;right:0;height:1px;
+  background:rgba(232,201,122,0.3);
+}
+
+/* gota/mirror tile background for embroidery card */
+.gi-tile-bg{
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 25% 25%,rgba(232,201,122,0.08) 2px,transparent 2px),
+    radial-gradient(circle at 75% 75%,rgba(196,81,31,0.06) 2px,transparent 2px);
+  background-size:20px 20px;
+}
+/* wide card decorative weft lines */
+.gi-weft{
+  position:absolute;inset:0;
+  background-image:repeating-linear-gradient(
+    0deg,transparent,transparent 18px,
+    rgba(232,201,122,0.04) 18px,rgba(232,201,122,0.04) 19px
+  );
+}
+
+/* ══════════════ PROCESS ══════════════ */
+#process{
+  padding:120px 8%;
+  background:var(--parchment);
+  position:relative;overflow:hidden;
+}
+#process .block-print{position:absolute;inset:0;opacity:.4;}
+.proc-inner{position:relative;z-index:1;}
+.proc-head{text-align:center;margin-bottom:80px;}
+.proc-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  position:relative;gap:0;
+}
+/* connector line */
+.proc-line{
+  position:absolute;top:44px;left:12%;width:76%;height:1px;
+  background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 12px,transparent 12px,transparent 22px);
+  opacity:.35;z-index:0;
+}
+.p-step{
+  text-align:center;padding:0 24px;
+  position:relative;z-index:1;
+}
+.p-node{
+  width:88px;height:88px;border-radius:50%;margin:0 auto 26px;
+  border:1.5px solid var(--gold);
+  background:var(--paper);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;
+  box-shadow:0 6px 24px rgba(28,15,10,.08);
+  transition:.35s;cursor:default;font-size:1.5rem;
+}
+.p-step:hover .p-node{
+  background:var(--madder);border-color:var(--madder);
+  box-shadow:0 10px 32px rgba(139,43,26,.3);
+}
+.p-num{
+  font-family:'IM Fell English',serif;
+  font-size:.65rem;color:var(--gold);letter-spacing:.1em;margin-top:2px;
+  display:block;
+}
+.p-step:hover .p-num{color:var(--gold-lt);}
+.p-title{
+  font-family:'IM Fell English',serif;
+  font-size:1.1rem;color:var(--ink);margin-bottom:10px;
+}
+.p-desc{font-size:.78rem;line-height:1.85;color:var(--warm-mid);}
+
+/* ══════════════ TESTIMONIALS ══════════════ */
+#testimonials{
+  padding:120px 8%;
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+#testimonials .jali{position:absolute;inset:0;}
+.test-inner{position:relative;z-index:1;}
+.test-head{text-align:center;margin-bottom:70px;}
+.test-head .sec-h{color:var(--parchment);}
+.test-head .sec-hi{color:rgba(245,236,215,.4);}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.t-card{
+  border:1px solid rgba(201,147,58,.15);
+  padding:38px 30px;position:relative;
+  transition:border-color .35s,transform .35s;
+}
+.t-card:hover{border-color:rgba(201,147,58,.45);transform:translateY(-5px);}
+.t-open{
+  font-family:'IM Fell English',serif;
+  font-size:4.5rem;color:rgba(201,147,58,.15);
+  line-height:.8;display:block;margin-bottom:16px;
+}
+.t-stars{color:var(--gold);font-size:.75rem;letter-spacing:3px;margin-bottom:14px;}
+.t-body{
+  font-family:'Libre Baskerville',serif;
+  font-size:.88rem;line-height:1.95;
+  color:rgba(245,236,215,.7);
+  font-style:italic;margin-bottom:22px;
+}
+.t-auth{display:flex;align-items:center;gap:12px;}
+.t-av{
+  width:40px;height:40px;border-radius:50%;
+  border:1.5px solid rgba(201,147,58,.4);
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+  flex-shrink:0;
+}
+.t-name{font-family:'IM Fell English',serif;font-size:.95rem;color:var(--gold-lt);}
+.t-place{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,236,215,.35);margin-top:2px;}
+
+/* ══════════════ CTA ══════════════ */
+#cta{
+  padding:120px 8%;text-align:center;
+  background:var(--parchment);
+  position:relative;overflow:hidden;
+}
+#cta .block-print{position:absolute;inset:0;opacity:.35;}
+.cta-inner{position:relative;z-index:1;}
+/* ornamental frame */
+.cta-frame{
+  display:inline-block;
+  border:1px solid var(--border);
+  padding:70px 80px;
+  position:relative;max-width:800px;width:100%;
+}
+.cta-frame::before,.cta-frame::after{
+  content:'';position:absolute;
+  width:40px;height:40px;
+}
+.cta-frame::before{top:-1px;left:-1px;border-top:3px solid var(--gold);border-left:3px solid var(--gold);}
+.cta-frame::after{bottom:-1px;right:-1px;border-bottom:3px solid var(--gold);border-right:3px solid var(--gold);}
+/* inner pseudo   we'll fake it with a div */
+.cta-frame-inner{position:relative;}
+.cta-frame-inner::before,.cta-frame-inner::after{
+  content:'';position:absolute;
+  width:40px;height:40px;
+}
+.cta-frame-inner::before{bottom:-70px;left:-80px;border-bottom:3px solid var(--gold);border-left:3px solid var(--gold);}
+.cta-frame-inner::after{top:-70px;right:-80px;border-top:3px solid var(--gold);border-right:3px solid var(--gold);}
+.cta-eye{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--rust);font-weight:500;margin-bottom:14px;}
+.cta-h{
+  font-family:'IM Fell English',serif;
+  font-size:clamp(2rem,3.5vw,3.2rem);
+  color:var(--ink);line-height:1.2;margin-bottom:8px;
+}
+.cta-hi{
+  font-family:'Noto Serif Devanagari',serif;
+  font-size:clamp(1.1rem,2vw,1.6rem);
+  color:var(--warm-mid);font-weight:300;margin-bottom:28px;opacity:.75;display:block;
+}
+.cta-desc{font-size:.85rem;color:var(--warm-mid);max-width:460px;margin:0 auto 40px;line-height:1.9;font-weight:300;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cta-contacts{
+  display:flex;gap:40px;justify-content:center;
+  margin-top:48px;padding-top:36px;
+  border-top:1px solid var(--border);flex-wrap:wrap;
+}
+.cc{display:flex;align-items:center;gap:12px;text-align:left;}
+.cc-ic{
+  width:38px;height:38px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;
+}
+.cc a{display:block;font-size:.85rem;font-weight:500;color:var(--ink);text-decoration:none;transition:.25s;}
+.cc a:hover{color:var(--madder);}
+.cc small{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-mid);opacity:.6;}
+
+/* ══════════════ FOOTER ══════════════ */
+footer{
+  background:var(--ink);
+  border-top:1px solid rgba(201,147,58,.2);
+  padding:70px 8% 32px;
+}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:60px;margin-bottom:50px;}
+.ft-brand .logo{margin-bottom:16px;}
+.ft-brand p{font-size:.78rem;line-height:1.9;color:rgba(245,236,215,.4);margin-bottom:20px;}
+.ft-social{display:flex;gap:8px;}
+.fs-btn{
+  width:34px;height:34px;
+  border:1px solid rgba(201,147,58,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.8rem;text-decoration:none;
+  transition:border-color .25s,background .25s;
+}
+.fs-btn:hover{border-color:var(--gold);background:rgba(201,147,58,.1);}
+.ft-h{
+  font-family:'IM Fell English',serif;
+  font-size:.95rem;color:var(--gold-lt);margin-bottom:20px;
+}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.ft-links a{
+  font-size:.78rem;color:rgba(245,236,215,.4);
+  text-decoration:none;transition:color .25s;
+}
+.ft-links a:hover{color:var(--gold-lt);}
+.ft-bottom{
+  border-top:1px solid rgba(201,147,58,.12);
+  padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.ft-bottom p{font-size:.65rem;color:rgba(245,236,215,.25);letter-spacing:.06em;}
+
+/* ── SCROLL REVEAL ── */
+.sr{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease;}
+.sr.v{opacity:1;transform:translateY(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  #hero{grid-template-columns:1fr;}
+  .hero-r{display:none;}
+  #about{grid-template-columns:1fr;gap:50px;}
+  .svc-grid{grid-template-columns:repeat(2,1fr);}
+  .gal-grid{grid-template-columns:repeat(2,1fr);}
+  .gal-grid .w2{grid-column:span 1;}
+  .proc-steps{grid-template-columns:repeat(2,1fr);gap:40px;}
+  .proc-line{display:none;}
+  .test-grid{grid-template-columns:1fr;}
+  .ft-grid{grid-template-columns:1fr;gap:32px;}
+  .cta-frame{padding:48px 36px;}
+  .cta-frame-inner::before,.cta-frame-inner::after{display:none;}
+}
+@media(max-width:768px){
+  .nav-mid,.nav-book{display:none;}
+  .hbg{display:flex;}
+  .svc-grid{grid-template-columns:1fr;}
+  .gal-grid{grid-template-columns:1fr;}
+  .gal-grid .t2{grid-row:span 1;}
+  .hero-stats{flex-direction:column;gap:24px;}
+  .hs{border-right:none;border-bottom:1px solid var(--border);padding:0 0 20px;}
+  .hs:last-child{border-bottom:none;}
+  .proc-steps{grid-template-columns:1fr;}
+  .cta-contacts{flex-direction:column;align-items:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="c-dot" id="cd"></div>
+<div class="c-ring" id="cr"></div>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-bar-note" id="lbn">Bespoke tailoring, Indore</span>
+  <div class="lang-seg">
+    <button id="bEn" onclick="setLang('en')">English</button>
+    <button class="on" id="bHi" onclick="setLang('hi')">हिन्दी</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">
+    <span class="logo-en">Seema Silai Centre</span>
+    <span class="logo-hi" id="logoHi">Indore, Madhya Pradesh</span>
+  </a>
+  <ul class="nav-mid" id="navMid">
+    <li><a href="#about"        data-en="Our Story"    data-hi="हमारे बारे में">Our Story</a></li>
+    <li><a href="#services"     data-en="Services"     data-hi="सेवाएं">Services</a></li>
+    <li><a href="#gallery"      data-en="Gallery"      data-hi="गैलरी">Gallery</a></li>
+    <li><a href="#process"      data-en="Process"      data-hi="प्रक्रिया">Process</a></li>
+    <li><a href="#testimonials" data-en="Reviews"      data-hi="समीक्षा">Reviews</a></li>
+  </ul>
+  <a href="#cta" class="nav-book" data-en="Book Appointment" data-hi="अपॉइंटमेंट लें">Book Appointment</a>
+  <div class="hbg" id="hbg" onclick="toggleMob()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOB MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-x" onclick="toggleMob()">✕</button>
+  <a href="#about"        onclick="toggleMob()" data-en="Our Story"    data-hi="हमारे बारे में">Our Story</a>
+  <a href="#services"     onclick="toggleMob()" data-en="Services"     data-hi="सेवाएं">Services</a>
+  <a href="#gallery"      onclick="toggleMob()" data-en="Gallery"      data-hi="गैलरी">Gallery</a>
+  <a href="#cta"          onclick="toggleMob()" data-en="Book Appointment" data-hi="अपॉइंटमेंट लें">Book Appointment</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-l">
+    <span class="hero-ornament">  ✦  </span>
+    <div class="hero-eyebrow" data-en="Bespoke Tailoring · Indore, Madhya Pradesh" data-hi="बेस्पोक सिलाई · इंदौर, मध्य प्रदेश">Bespoke Tailoring · Indore, Madhya Pradesh</div>
+    <h1 class="hero-title">
+      Where Fabric<br>
+      <em>Becomes Art</em>
+    </h1>
+    <div class="hero-hi" data-en="जहाँ कपड़ा बनता है कला" data-hi="जहाँ कपड़ा बनता है कला">जहाँ कपड़ा बनता है कला</div>
+    <div class="hero-rule">
+      <div class="hero-rule-line"></div>
+      <div class="hero-rule-dia"></div>
+      <div class="hero-rule-line" style="background:linear-gradient(270deg,var(--gold),transparent)"></div>
+    </div>
+    <p class="hero-desc" data-en="Hand-cut, hand-stitched, and finished with the same patience as traditional zardozi   every garment from our atelier is made to honour the woman who wears it." data-hi="हाथ से काटा, हाथ से सिला   हमारे हर लिबास में उसी सब्र की झलक है जो पुरानी ज़रदोज़ी में होती थी। हर कपड़ा उस स्त्री के सम्मान में बनाया जाता है जो उसे पहनती है।">
+      Hand-cut, hand-stitched, and finished with the same patience as traditional zardozi   every garment from our atelier is made to honour the woman who wears it.
+    </p>
+    <div class="hero-actions">
+      <a href="#cta" class="btn-fill"><span data-en="Book a Consultation" data-hi="परामर्श बुक करें">Book a Consultation</span></a>
+      <a href="#gallery" class="btn-ghost" data-en="View Craft" data-hi="काम देखें">View Craft</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs">
+        <div class="hs-n">5000<sup>+</sup></div>
+        <div class="hs-l" data-en="Garments Made" data-hi="लिबास तैयार">Garments Made</div>
+      </div>
+      <div class="hs">
+        <div class="hs-n">25<sup>+</sup></div>
+        <div class="hs-l" data-en="Years of Craft" data-hi="साल का अनुभव">Years of Craft</div>
+      </div>
+      <div class="hs">
+        <div class="hs-n">4.9<sup>★</sup></div>
+        <div class="hs-l" data-en="Avg. Rating" data-hi="औसत रेटिंग">Avg. Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-r">
+    <div class="hero-r-bg"></div>
+    <div class="hero-r-jali jali"></div>
+    <div class="hero-r-circle"></div>
+    <!-- corner ornaments -->
+    <div class="corner tl"><svg viewBox="0 0 32 32" fill="none"><path d="M1 31 V1 H31" stroke="#C9933A" stroke-width="1.2" opacity=".5"/><circle cx="1" cy="1" r="3" fill="none" stroke="#C9933A" stroke-width=".8" opacity=".4"/></svg></div>
+    <div class="corner tr"><svg viewBox="0 0 32 32" fill="none"><path d="M1 31 V1 H31" stroke="#C9933A" stroke-width="1.2" opacity=".5"/><circle cx="1" cy="1" r="3" fill="none" stroke="#C9933A" stroke-width=".8" opacity=".4"/></svg></div>
+    <div class="corner bl"><svg viewBox="0 0 32 32" fill="none"><path d="M1 31 V1 H31" stroke="#C9933A" stroke-width="1.2" opacity=".5"/><circle cx="1" cy="1" r="3" fill="none" stroke="#C9933A" stroke-width=".8" opacity=".4"/></svg></div>
+    <div class="corner br"><svg viewBox="0 0 32 32" fill="none"><path d="M1 31 V1 H31" stroke="#C9933A" stroke-width="1.2" opacity=".5"/><circle cx="1" cy="1" r="3" fill="none" stroke="#C9933A" stroke-width=".8" opacity=".4"/></svg></div>
+    <!-- central card -->
+    <div class="fabric-card">
+      <span class="fc-motif">🧵</span>
+      <div class="fc-title" data-en="Seema Silai Centre" data-hi="सीमा सिलाई सेंटर">Seema Silai Centre</div>
+      <div class="fc-sub" data-en="Atelier · Indore" data-hi="अटेलियर · इंदौर">Atelier · Indore</div>
+    </div>
+    <!-- chips -->
+    <div class="chip a"><strong>25<span style="font-size:.55em">yr</span></strong><span data-en="Heritage" data-hi="विरासत">Heritage</span></div>
+    <div class="chip b"><strong>5k<span style="font-size:.55em">+</span></strong><span data-en="Clients" data-hi="ग्राहक">Clients</span></div>
+    <div class="chip c" data-en="Zardozi · Gota · Mirror" data-hi="ज़रदोज़ी · गोटा · मिरर">Zardozi · Gota · Mirror</div>
+    <div class="chip d" data-en="Blouse · Lehenga · Suit" data-hi="ब्लाउज · लहंगा · सूट">Blouse · Lehenga · Suit</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq">
+  <div class="marq-inner">
+    <span class="marq-item" data-en="Saree Blouse" data-hi="साड़ी ब्लाउज">Saree Blouse</span>
+    <span class="marq-item" data-en="Lehenga Choli" data-hi="लहंगा-चोली">Lehenga Choli</span>
+    <span class="marq-item" data-en="Salwar Suit" data-hi="सलवार-सूट">Salwar Suit</span>
+    <span class="marq-item" data-en="Zardozi Embroidery" data-hi="ज़रदोज़ी कढ़ाई">Zardozi Embroidery</span>
+    <span class="marq-item" data-en="Gota Patti Work" data-hi="गोटा पट्टी">Gota Patti Work</span>
+    <span class="marq-item" data-en="Mirror Work" data-hi="मिरर वर्क">Mirror Work</span>
+    <span class="marq-item" data-en="Bridal Couture" data-hi="ब्राइडल कॉउचर">Bridal Couture</span>
+    <span class="marq-item" data-en="Custom Fitting" data-hi="कस्टम फिटिंग">Custom Fitting</span>
+    <!-- dup -->
+    <span class="marq-item" data-en="Saree Blouse" data-hi="साड़ी ब्लाउज">Saree Blouse</span>
+    <span class="marq-item" data-en="Lehenga Choli" data-hi="लहंगा-चोली">Lehenga Choli</span>
+    <span class="marq-item" data-en="Salwar Suit" data-hi="सलवार-सूट">Salwar Suit</span>
+    <span class="marq-item" data-en="Zardozi Embroidery" data-hi="ज़रदोज़ी कढ़ाई">Zardozi Embroidery</span>
+    <span class="marq-item" data-en="Gota Patti Work" data-hi="गोटा पट्टी">Gota Patti Work</span>
+    <span class="marq-item" data-en="Mirror Work" data-hi="मिरर वर्क">Mirror Work</span>
+    <span class="marq-item" data-en="Bridal Couture" data-hi="ब्राइडल कॉउचर">Bridal Couture</span>
+    <span class="marq-item" data-en="Custom Fitting" data-hi="कस्टम फिटिंग">Custom Fitting</span>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="about-mosaic sr">
+    <div class="mos-box mos1"><div class="mos-fill"><span>🥻</span><p data-en="Bridal Collection" data-hi="ब्राइडल कलेक्शन">Bridal Collection</p></div></div>
+    <div class="mos-box mos2"><div class="mos-fill"><span>🌸</span><p data-en="Embroidery Work" data-hi="कढ़ाई का काम">Embroidery Work</p></div></div>
+    <div class="mos-tag">
+      <strong>25</strong>
+      <span data-en="Years of Atelier" data-hi="साल की कारीगरी">Years of Atelier</span>
+    </div>
+  </div>
+  <div class="about-text sr">
+    <div class="sec-eye" data-en="Our Story" data-hi="हमारी कहानी">Our Story</div>
+    <h2 class="sec-h">
+      Craft passed<br>
+      <em>hand to hand</em>
+    </h2>
+    <div class="sec-hi" data-en="पीढ़ी दर पीढ़ी की कारीगरी" data-hi="पीढ़ी दर पीढ़ी की कारीगरी">पीढ़ी दर पीढ़ी की कारीगरी</div>
+    <p data-en="Seema Meena started Seema Silai Centre in the heart of Veena Nagar with one clear belief   that every woman deserves a garment made exactly for her. Not adjusted, not compromised. Made for her." data-hi="सीमा मीणा ने वीणा नगर में सीमा सिलाई सेंटर एक स्पष्ट विश्वास के साथ शुरू किया   कि हर स्त्री उस लिबास की हकदार है जो सिर्फ उसके लिए बना हो। समझौता नहीं, जुगाड़ नहीं   सिर्फ उसके लिए।">
+      Seema Meena started Seema Silai Centre in the heart of Veena Nagar with one clear belief   that every woman deserves a garment made exactly for her. Not adjusted, not compromised. Made for her.
+    </p>
+    <p data-en="We do not rush. Fabrics are draped, pinned, and assessed on the body before a single cut is made. That is a discipline we refuse to abandon, no matter the deadline." data-hi="हम जल्दबाज़ी नहीं करते। कपड़े को पहले शरीर पर लपेट कर देखा जाता है, पिन किया जाता है   तब कहीं जाकर कैंची चलती है। यह अनुशासन हम किसी भी समय-सीमा के लिए नहीं छोड़ते।">
+      We do not rush. Fabrics are draped, pinned, and assessed on the body before a single cut is made. That is a discipline we refuse to abandon, no matter the deadline.
+    </p>
+    <div class="owner-row">
+      <div class="owner-av">👩</div>
+      <div>
+        <div class="owner-n">Seema Meena</div>
+        <div class="owner-t" data-en="Founder & Master Tailor" data-hi="संस्थापक एवं मुख्य कारीगर">Founder & Master Tailor</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+  <div class="jali" style="position:absolute;inset:0;"></div>
+  <div class="services-inner">
+    <div class="svc-head sr">
+      <div class="sec-eye" data-en="What We Make" data-hi="हम क्या बनाते हैं">What We Make</div>
+      <h2 class="sec-h" data-en="Every stitch, intentional" data-hi="हर सिलाई, सोच-समझकर">Every stitch, intentional</h2>
+      <div class="sec-hi" data-en="हर सिलाई, इरादे से" data-hi="हर सिलाई, इरादे से">हर सिलाई, इरादे से</div>
+      <div class="svc-ornament"><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+    <div class="svc-grid sr">
+      <div class="svc-card">
+        <span class="svc-num">01</span>
+        <span class="svc-ico">🥻</span>
+        <div class="svc-title" data-en="Saree Blouse" data-hi="साड़ी ब्लाउज">Saree Blouse</div>
+        <p class="svc-desc" data-en="Backless, padded, high-neck, puff sleeve   cut on the body, not from a size chart. Every detail negotiated with the wearer." data-hi="बैकलेस, पैडेड, हाई-नेक, पफ स्लीव   कपड़ा शरीर पर नाप कर काटा जाता है, साइज़ चार्ट से नहीं।">Backless, padded, high-neck, puff sleeve   cut on the body, not from a size chart. Every detail negotiated with the wearer.</p>
+        <div class="svc-pills"><span class="pill">Backless</span><span class="pill">Padded</span><span class="pill">High-neck</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">02</span>
+        <span class="svc-ico">🪡</span>
+        <div class="svc-title" data-en="Lehenga & Choli" data-hi="लहंगा और चोली">Lehenga &amp; Choli</div>
+        <p class="svc-desc" data-en="Bridal, reception, and festive lehengas stitched to breathe with the body   flare, weight, and fall all considered together." data-hi="ब्राइडल, रिसेप्शन और त्योहारी लहंगे   जो शरीर के साथ चलते हैं, घुमाव, भार और लहर सब एक साथ सोचे जाते हैं।">Bridal, reception, and festive lehengas stitched to breathe with the body   flare, weight, and fall all considered together.</p>
+        <div class="svc-pills"><span class="pill">Bridal</span><span class="pill">Reception</span><span class="pill">Festive</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">03</span>
+        <span class="svc-ico">🧣</span>
+        <div class="svc-title" data-en="Salwar Suit" data-hi="सलवार-सूट">Salwar Suit</div>
+        <p class="svc-desc" data-en="Anarkali, Punjabi, palazzo, sharara   silhouettes shaped to the person, never the other way around." data-hi="अनारकली, पंजाबी, पलाज़ो, शरारा   सिल्हूट व्यक्ति के अनुसार बनता है, न कि व्यक्ति सिल्हूट के अनुसार ढलता है।">Anarkali, Punjabi, palazzo, sharara   silhouettes shaped to the person, never the other way around.</p>
+        <div class="svc-pills"><span class="pill">Anarkali</span><span class="pill">Palazzo</span><span class="pill">Sharara</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">04</span>
+        <span class="svc-ico">✦</span>
+        <div class="svc-title" data-en="Embroidery Work" data-hi="कढ़ाई">Embroidery Work</div>
+        <p class="svc-desc" data-en="Zardozi, gota patti, mirror work, and thread embroidery   India's textile traditions, kept alive needle by needle." data-hi="ज़रदोज़ी, गोटा पट्टी, मिरर वर्क, और धागे की कढ़ाई   भारत की कपड़ा परंपराएं, एक-एक सुई से जीवित रखी जाती हैं।">Zardozi, gota patti, mirror work, and thread embroidery   India's textile traditions, kept alive needle by needle.</p>
+        <div class="svc-pills"><span class="pill">Zardozi</span><span class="pill">Gota Patti</span><span class="pill">Mirror</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">05</span>
+        <span class="svc-ico">🧒</span>
+        <div class="svc-title" data-en="Children's Wear" data-hi="बच्चों के कपड़े">Children's Wear</div>
+        <p class="svc-desc" data-en="Ghagra choli, kurta pyjama, frock   made with soft seam allowances and room to move, for the joy of small celebrations." data-hi="घघरा-चोली, कुर्ता-पजामा, फ्रॉक   मुलायम सीम और हिलने-डुलने की जगह के साथ, बच्चों की छोटी-बड़ी खुशियों के लिए।">Ghagra choli, kurta pyjama, frock   made with soft seam allowances and room to move, for the joy of small celebrations.</p>
+        <div class="svc-pills"><span class="pill">Ghagra</span><span class="pill">Kurta</span><span class="pill">Frock</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">06</span>
+        <span class="svc-ico">✂️</span>
+        <div class="svc-title" data-en="Alterations" data-hi="अल्टरेशन">Alterations</div>
+        <p class="svc-desc" data-en="A beloved garment deserves a second life. We resize, restore, reline, and reimagine   with the same care as a new commission." data-hi="एक पसंदीदा कपड़ा दूसरी ज़िंदगी का हकदार है। हम उसे फिर से नाप में लाते हैं, बहाल करते हैं   उतनी ही तवज्जो से जितनी नए काम को।">A beloved garment deserves a second life. We resize, restore, reline, and reimagine   with the same care as a new commission.</p>
+        <div class="svc-pills"><span class="pill">Resize</span><span class="pill">Restore</span><span class="pill">Reline</span></div>
+      </div>
+      <div class="svc-card" style="border-color:rgba(201,147,58,0.4);background:rgba(201,147,58,0.05);">
+        <span class="svc-num">07</span>
+        <span class="svc-ico">📐</span>
+        <div class="svc-title" data-en="Silai Classes" data-hi="सिलाई सिखाना">सिलाई सिखाना</div>
+        <p class="svc-desc" data-en="Seema Ji personally teaches the art of tailoring   from basic hand stitching to blouse cutting, suit drafting, and embroidery. Batches for beginners and advanced learners both." data-hi="सीमा जी खुद सिलाई की कला सिखाती हैं   हाथ की सिलाई से लेकर ब्लाउज काटना, सूट का नाप बनाना और कढ़ाई तक। शुरुआती और अनुभवी   दोनों के लिए बैच उपलब्ध हैं।">सीमा जी खुद सिलाई की कला सिखाती हैं   हाथ की सिलाई से लेकर ब्लाउज काटना, सूट का नाप बनाना और कढ़ाई तक। शुरुआती और अनुभवी   दोनों के लिए बैच उपलब्ध हैं।</p>
+        <div class="svc-pills">
+          <span class="pill" data-en="Beginners" data-hi="शुरुआती">शुरुआती</span>
+          <span class="pill" data-en="Advanced" data-hi="अनुभवी">अनुभवी</span>
+          <span class="pill" data-en="Certificate" data-hi="सर्टिफिकेट">सर्टिफिकेट</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<section id="gallery">
+  <div class="gal-head sr">
+    <div>
+      <div class="sec-eye" data-en="Our Work" data-hi="हमारी कारीगरी">Our Work</div>
+      <h2 class="sec-h" data-en="From the atelier" data-hi="अटेलियर से">From the atelier</h2>
+    </div>
+    <div class="gal-filters">
+      <button class="gf on" data-en="All" data-hi="सभी">All</button>
+      <button class="gf" data-en="Bridal" data-hi="ब्राइडल">Bridal</button>
+      <button class="gf" data-en="Embroidery" data-hi="कढ़ाई">Embroidery</button>
+      <button class="gf" data-en="Suits" data-hi="सूट">Suits</button>
+    </div>
+  </div>
+  <div class="gal-grid sr">
+    <!-- 1: Bridal Blouse   tall, deep red -->
+    <div class="gi t2 gi-1">
+      <div class="gi-fill gi-tile-bg">
+        <div class="garment-art">
+          <div class="art-blouse">
+            <div class="neck"></div>
+            <div class="sl"></div>
+            <div class="sr-s"></div>
+            <div class="zari"></div>
+            <div class="zari2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gi-veil">
+        <div>
+          <span class="gi-lbl" data-en="Bridal Blouse" data-hi="ब्राइडल ब्लाउज">Bridal Blouse</span>
+          <span class="gi-sublbl" data-en="Zardozi · Hand-finished" data-hi="ज़रदोज़ी · हाथ से तैयार">Zardozi · Hand-finished</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: Anarkali Suit   forest green -->
+    <div class="gi gi-2">
+      <div class="gi-fill gi-weft">
+        <div class="garment-art">
+          <div class="art-suit">
+            <div class="kurta"></div>
+            <div class="salwar"><div class="leg"></div><div class="leg"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="gi-veil">
+        <div>
+          <span class="gi-lbl" data-en="Anarkali Suit" data-hi="अनारकली सूट">Anarkali Suit</span>
+          <span class="gi-sublbl" data-en="Salwar · Palazzo · Sharara" data-hi="सलवार · पलाज़ो · शरारा">Salwar · Palazzo · Sharara</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: Embroidery   indigo -->
+    <div class="gi gi-3">
+      <div class="gi-fill gi-tile-bg">
+        <div class="garment-art">
+          <div class="art-embroidery">
+            <div class="emb-center"></div>
+            <div class="emb-petal" style="transform:rotate(0deg) translateX(-50%) rotate(0deg);left:50%;margin-left:-7%;"></div>
+            <div class="emb-petal" style="transform:rotate(60deg);"></div>
+            <div class="emb-petal" style="transform:rotate(120deg);"></div>
+            <div class="emb-petal" style="transform:rotate(180deg);"></div>
+            <div class="emb-petal" style="transform:rotate(240deg);"></div>
+            <div class="emb-petal" style="transform:rotate(300deg);"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gi-veil">
+        <div>
+          <span class="gi-lbl" data-en="Embroidery Work" data-hi="कढ़ाई">Embroidery Work</span>
+          <span class="gi-sublbl" data-en="Gota · Mirror · Zardozi" data-hi="गोटा · मिरर · ज़रदोज़ी">Gota · Mirror · Zardozi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4: Bridal Lehenga   wide + golden -->
+    <div class="gi w2 gi-4">
+      <div class="gi-fill gi-tile-bg">
+        <div class="garment-art" style="gap:40px;flex-direction:row;align-items:flex-end;">
+          <div class="art-lehenga">
+            <div class="choli"></div>
+            <div class="skirt"></div>
+            <div class="dupatta"></div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:1;">
+            <div style="font-family:'IM Fell English',serif;font-size:1.1rem;color:rgba(232,201,122,0.6);font-style:italic;line-height:1.5;">
+              Bridal<br>Lehenga
+            </div>
+            <div style="font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(232,201,122,0.35);margin-top:6px;">Indore · Madhya Pradesh</div>
+          </div>
+          <div class="art-lehenga" style="opacity:0.45;transform:scale(0.85);">
+            <div class="choli"></div>
+            <div class="skirt"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gi-veil">
+        <div>
+          <span class="gi-lbl" data-en="Bridal Lehenga" data-hi="ब्राइडल लहंगा">Bridal Lehenga</span>
+          <span class="gi-sublbl" data-en="Wedding · Reception · Festive" data-hi="शादी · रिसेप्शन · उत्सव">Wedding · Reception · Festive</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5: Saree / Gota   purple -->
+    <div class="gi gi-5">
+      <div class="gi-fill gi-weft">
+        <div class="garment-art">
+          <div class="art-saree">
+            <div class="body"></div>
+            <div class="pallu"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gi-veil">
+        <div>
+          <span class="gi-lbl" data-en="Saree Draping" data-hi="साड़ी ड्रेपिंग">Saree Draping</span>
+          <span class="gi-sublbl" data-en="Gota Patti Border" data-hi="गोटा पट्टी बॉर्डर">Gota Patti Border</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6: Thread embroidery   teal, tall -->
+    <div class="gi t2 gi-6">
+      <div class="gi-fill gi-tile-bg">
+        <div class="garment-art" style="flex-direction:column;gap:18px;">
+          <div class="art-embroidery" style="width:55%;max-width:90px;">
+            <div class="emb-center"></div>
+            <div class="emb-petal" style="transform:rotate(45deg);"></div>
+            <div class="emb-petal" style="transform:rotate(135deg);"></div>
+            <div class="emb-petal" style="transform:rotate(225deg);"></div>
+            <div class="emb-petal" style="transform:rotate(315deg);"></div>
+          </div>
+          <div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(232,201,122,0.4);" data-en="Hand Embroidery" data-hi="हाथ से कढ़ाई">Hand Embroidery</div>
+        </div>
+      </div>
+      <div class="gi-veil">
+        <div>
+          <span class="gi-lbl" data-en="Thread Work" data-hi="धागा कढ़ाई">Thread Work</span>
+          <span class="gi-sublbl" data-en="Needle by needle" data-hi="एक-एक सुई से">Needle by needle</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7: Kurti   warm brown -->
+    <div class="gi gi-7">
+      <div class="gi-fill gi-weft">
+        <div class="garment-art">
+          <div class="art-kurti">
+            <div class="body"></div>
+            <div class="neckline"></div>
+            <div class="ksl"></div>
+            <div class="ksr"></div>
+            <div class="print"></div>
+            <div class="hem"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gi-veil">
+        <div>
+          <span class="gi-lbl" data-en="Designer Kurti" data-hi="डिज़ाइनर कुर्ती">Designer Kurti</span>
+          <span class="gi-sublbl" data-en="Daily · Festive · Office" data-hi="रोज़ाना · उत्सव · दफ्तर">Daily · Festive · Office</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8: Kids Ghagra   deep rose -->
+    <div class="gi gi-8">
+      <div class="gi-fill gi-tile-bg">
+        <div class="garment-art">
+          <div class="art-kids">
+            <div class="ktop"></div>
+            <div class="kskirt"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gi-veil">
+        <div>
+          <span class="gi-lbl" data-en="Kids' Ghagra Choli" data-hi="बच्चों का घघरा-चोली">Kids' Ghagra Choli</span>
+          <span class="gi-sublbl" data-en="For little celebrations" data-hi="छोटी खुशियों के लिए">For little celebrations</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section id="process">
+  <div class="block-print" style="position:absolute;inset:0;"></div>
+  <div class="proc-inner">
+    <div class="proc-head sr">
+      <div class="sec-eye" data-en="How It Works" data-hi="कैसे होता है">How It Works</div>
+      <h2 class="sec-h" data-en="Four unhurried steps" data-hi="चार सोचे-समझे कदम">Four unhurried steps</h2>
+      <div class="sec-hi" data-en="चार सोचे-समझे कदम" data-hi="चार सोचे-समझे कदम">चार सोचे-समझे कदम</div>
+    </div>
+    <div class="proc-steps sr">
+      <div class="proc-line"></div>
+      <div class="p-step">
+        <div class="p-node">📏<span class="p-num">I</span></div>
+        <div class="p-title" data-en="Drape & Measure" data-hi="नाप और परख">Drape &amp; Measure</div>
+        <p class="p-desc" data-en="We take measurements on the body   not from a tape held at arm's length." data-hi="नाप शरीर पर लिया जाता है   दूर से टेप नहीं फेंका जाता।">We take measurements on the body   not from a tape held at arm's length.</p>
+      </div>
+      <div class="p-step">
+        <div class="p-node">✏️<span class="p-num">II</span></div>
+        <div class="p-title" data-en="Choose & Design" data-hi="चुनाव और डिज़ाइन">Choose &amp; Design</div>
+        <p class="p-desc" data-en="Fabric, embroidery, cut, silhouette   every decision is yours, guided by ours." data-hi="कपड़ा, कढ़ाई, कट, सिल्हूट   हर फ़ैसला आपका होता है, हमारी राय के साथ।">Fabric, embroidery, cut, silhouette   every decision is yours, guided by ours.</p>
+      </div>
+      <div class="p-step">
+        <div class="p-node">🧵<span class="p-num">III</span></div>
+        <div class="p-title" data-en="Stitch & Finish" data-hi="सिलाई और फिनिश">Stitch &amp; Finish</div>
+        <p class="p-desc" data-en="Cut, assembled, and finished by hand. A trial fitting ensures nothing is assumed." data-hi="हाथ से काटा, जोड़ा और खत्म किया जाता है। ट्रायल फिटिंग में सब जांचा जाता है।">Cut, assembled, and finished by hand. A trial fitting ensures nothing is assumed.</p>
+      </div>
+      <div class="p-step">
+        <div class="p-node">🎁<span class="p-num">IV</span></div>
+        <div class="p-title" data-en="Deliver & Wear" data-hi="डिलीवरी और पहनावा">Deliver &amp; Wear</div>
+        <p class="p-desc" data-en="Pressed, wrapped, and ready   exactly as agreed, delivered with care." data-hi="प्रेस किया, लपेटा और तैयार   जैसा तय हुआ था, उसी तरह सौंपा जाता है।">Pressed, wrapped, and ready   exactly as agreed, delivered with care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials">
+  <div class="jali" style="position:absolute;inset:0;"></div>
+  <div class="test-inner">
+    <div class="test-head sr">
+      <div class="sec-eye" style="justify-content:center;color:rgba(201,147,58,.65)" data-en="What Clients Say" data-hi="ग्राहकों की बात">What Clients Say</div>
+      <h2 class="sec-h" data-en="Worn and remembered" data-hi="पहना और याद रखा गया">Worn and remembered</h2>
+      <div class="sec-hi" data-en="पहना और याद रखा गया" data-hi="पहना और याद रखा गया">पहना और याद रखा गया</div>
+    </div>
+    <div class="test-grid sr">
+      <div class="t-card">
+        <span class="t-open">"</span>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-body" data-en="My bridal blouse fit in a way I had never felt before. Seema Ji spent two full hours just on the draping. That kind of attention is rare." data-hi="मेरे ब्राइडल ब्लाउज की फिटिंग ऐसी थी जो मैंने पहले कभी महसूस नहीं की थी। सीमा जी ने सिर्फ ड्रेपिंग पर दो पूरे घंटे लगाए। ऐसी तवज्जो दुर्लभ है।">My bridal blouse fit in a way I had never felt before. Seema Ji spent two full hours just on the draping. That kind of attention is rare.</p>
+          <div class="t-auth">
+          <div class="t-av" style="background:rgba(196,82,31,.15)">👩</div>
+          <div><div class="t-name">Priya Sharma</div><div class="t-place">Indore</div></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <span class="t-open">"</span>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-body" data-en="The gota patti work on my mother's saree blouse was so fine it looked like the gold had grown out of the fabric. Not stitched on   grown." data-hi="मेरी माँ की साड़ी के ब्लाउज पर गोटा पट्टी इतनी बारीक थी कि लगा जैसे सोना कपड़े से उगा हो। सिला नहीं   उगा हो।">The gota patti work on my mother's saree blouse was so fine it looked like the gold had grown out of the fabric. Not stitched on   grown.</p>
+        <div class="t-auth">
+          <div class="t-av" style="background:rgba(26,92,85,.2)">👩</div>
+          <div><div class="t-name">Anita Gupta</div><div class="t-place">Delhi</div></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <span class="t-open">"</span>
+        <div class="t-stars">★★★★★</div>
+        <p class="t-body" data-en="I showed her a reference photo from an old magazine and she recreated it exactly   the pleating, the sleeve width, the hook placement. All of it." data-hi="मैंने उन्हें एक पुरानी पत्रिका से कटी तस्वीर दिखाई और उन्होंने बिल्कुल वैसा ही बना दिया   चुन्नट, आस्तीन की चौड़ाई, हुक की जगह। सब कुछ।">I showed her a reference photo from an old magazine and she recreated it exactly   the pleating, the sleeve width, the hook placement. All of it.</p>
+        <div class="t-auth">
+          <div class="t-av" style="background:rgba(92,58,10,.2)">👩</div>
+          <div><div class="t-name">Sunita Mehta</div><div class="t-place">Ajmer</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="block-print" style="position:absolute;inset:0;"></div>
+  <div class="cta-inner sr">
+    <div class="cta-frame">
+      <div class="cta-frame-inner">
+        <div class="cta-eye" data-en="Get in Touch" data-hi="संपर्क करें">Get in Touch</div>
+        <h2 class="cta-h" data-en="Ready to be measured?" data-hi="नाप लेने के लिए तैयार हैं?">Ready to be measured?</h2>
+        <em class="cta-hi" data-en="नाप लेने के लिए तैयार हैं?" data-hi="नाप लेने के लिए तैयार हैं?">नाप लेने के लिए तैयार हैं?</em>
+        <p class="cta-desc" data-en="The first consultation is free. Bring a reference, bring an idea, or bring nothing at all   we will start from where you are." data-hi="पहली मुलाकात निःशुल्क है। कोई तस्वीर लाइए, कोई ख़याल लाइए, या बिना कुछ लाए आइए   हम वहीं से शुरू करेंगे जहाँ आप हैं।">
+          The first consultation is free. Bring a reference, bring an idea, or bring nothing at all   we will start from where you are.
+        </p>
+        <div class="cta-btns">
+          <a href="mailto:seemasilaicentre@gmail.com" class="btn-fill"><span data-en="Email the Atelier" data-hi="ईमेल करें">Email the Atelier</span></a>
+          <a href="mailto:seemasilaicentre@gmail.com" class="btn-ghost" data-en="seemasilaicentre@gmail.com" data-hi="seemasilaicentre@gmail.com">seemasilaicentre@gmail.com</a>
+        </div>
+        <div class="cta-contacts">
+          <div class="cc">
+            <div class="cc-ic">📍</div>
+            <div>
+              <a href="#">A-24 Veena Nagar, Indore</a>
+              <small data-en="Madhya Pradesh 452010" data-hi="मध्य प्रदेश 452010">Madhya Pradesh 452010</small>
+            </div>
+          </div>
+          <div class="cc">
+            <div class="cc-ic">🕐</div>
+            <div>
+              <a href="#" data-en="9 AM   7 PM" data-hi="सुबह 9   शाम 7">9 AM   7 PM</a>
+              <small data-en="Monday to Saturday" data-hi="सोमवार से शनिवार">Monday to Saturday</small>
+            </div>
+          </div>
+          <div class="cc">
+            <div class="cc-ic">✉️</div>
+            <div>
+              <a href="mailto:seemasilaicentre@gmail.com">seemasilaicentre@gmail.com</a>
+              <small data-en="Write to us anytime" data-hi="कभी भी लिखें">Write to us anytime</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <a href="#" class="logo">
+        <span class="logo-en">Seema Silai Centre</span>
+        <span class="logo-hi">Indore, Madhya Pradesh</span>
+      </a>
+      <p data-en="A bespoke tailoring atelier in Veena Nagar, Indore. Hand-stitched garments, made with time." data-hi="वीणा नगर, इंदौर में एक बेस्पोक सिलाई अटेलियर। हाथ से सिले कपड़े, वक्त लेकर बने।">A bespoke tailoring atelier in Veena Nagar, Indore. Hand-stitched garments, made with time.</p>
+      <div class="ft-social">
+        <a class="fs-btn" href="#">📘</a>
+        <a class="fs-btn" href="#">📸</a>
+        <a class="fs-btn" href="#">💬</a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-h" data-en="Navigate" data-hi="नेविगेट करें">Navigate</div>
+      <ul class="ft-links">
+        <li><a href="#about"        data-en="Our Story"    data-hi="हमारी कहानी">Our Story</a></li>
+        <li><a href="#services"     data-en="Services"     data-hi="सेवाएं">Services</a></li>
+        <li><a href="#gallery"      data-en="Gallery"      data-hi="गैलरी">Gallery</a></li>
+        <li><a href="#testimonials" data-en="Reviews"      data-hi="समीक्षा">Reviews</a></li>
+        <li><a href="#cta"          data-en="Book Appointment" data-hi="अपॉइंटमेंट">Book Appointment</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-h" data-en="Contact" data-hi="संपर्क">Contact</div>
+      <ul class="ft-links">
+        <li><a href="#">📍 A-24 Veena Nagar, Indore 452010</a></li>
+        <li><a href="mailto:seemasilaicentre@gmail.com">✉️ seemasilaicentre@gmail.com</a></li>
+        <li><a href="#" data-en="🕐 Mon Sat: 9AM 7PM" data-hi="🕐 सोम शनि: 9AM 7PM">🕐 Mon Sat: 9AM 7PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p data-en="© 2025 Seema Silai Centre. All rights reserved." data-hi="© 2025 सीमा सिलाई सेंटर। सर्वाधिकार सुरक्षित।">© 2025 Seema Silai Centre. All rights reserved.</p>
+    <p style="color:rgba(245,236,215,.2);font-size:.6rem;letter-spacing:.12em" data-en="Made with ❤️ by Kunal" data-hi="Made with ❤️ by Kunal">Made with ❤️ by Kunal</p>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;});
+setInterval(()=>{rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cr.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;},16);
+
+// Mobile menu
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('show');}
+
+// Scroll reveal
+const srs=document.querySelectorAll('.sr');
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');}),{threshold:.12});
+srs.forEach(el=>io.observe(el));
+
+// Nav shadow on scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('up',scrollY>60);
+});
+
+// Language toggle
+let lang='hi';
+function setLang(l){
+  lang=l;
+  document.getElementById('bEn').classList.toggle('on',l==='en');
+  document.getElementById('bHi').classList.toggle('on',l==='hi');
+  document.getElementById('lbn').textContent=l==='en'?'Bespoke tailoring, Indore':'इंदौर का बेस्पोक अटेलियर';
+  document.getElementById('logoHi').textContent=l==='en'?'Indore, Madhya Pradesh':'इंदौर, मध्य प्रदेश';
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    if(el.tagName==='INPUT'||el.tagName==='BUTTON') return;
+    el.textContent=el.getAttribute('data-'+l)||el.textContent;
+  });
+}
+// Load in Hindi by default
+setLang('hi');
+
+// Gallery filter (visual only)
+document.querySelectorAll('.gf').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.gf').forEach(b=>b.classList.remove('on'));
+    this.classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
